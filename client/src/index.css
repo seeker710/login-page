@@ -1,0 +1,114 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  font-family: 'Varela', sans-serif;
+}
+@font-face {
+  font-family: 'Varela';
+  src: url('./assets/fonts/VarelaRound-Regular.woff');
+}
+:root {
+  --lightGrey: #b6b5b5;
+  --darkGrey: #696969;
+  --purple: #a64bf4;
+}
+/* login and signin styles */
+.head {
+  margin-bottom: 2em;
+  text-align: center;
+}
+.login, .login-text {
+  margin: 10px;
+}
+.login-text {
+  color: var(--lightGrey);
+}
+.input-area {
+  margin: 1em;
+  border-bottom: 2px solid var(--lightGrey);
+}
+.label {
+  color: #333333;
+  display: block;
+  font-size: 1.1em;
+  line-height: 2.5;
+}
+.icon {
+  color: var(--purple);
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
+  top: 8px;
+}
+.focus-input::after {
+  content: "";
+  background: var(--darkGrey);
+  display: block;
+  height: 2px;
+  width: 0%;
+  position: relative;
+  bottom: -2px;
+  transition: all 0.5s;
+}
+.input:focus + .focus-input::after {
+  width: 100%;
+}
+.wrapper {
+  margin-top: 2.5em;
+  text-align: center;
+}
+.wrap:hover .bg-btn {
+  left: 0;
+}
+.wrapper > p {
+  margin-top: 1em;
+  color: var(--darkGrey);
+}
+.wrapper a {
+  text-decoration: none;
+  color: var(--purple);
+}
+/* homepage styles */
+.intro, .descript {
+  margin-bottom: 3px;
+}
+.info {
+  display: inline;
+  font-size: 17px;
+}
+.homepage-footer {
+  margin-top: 3em;
+  text-align: center;
+}
+.homepage-footer>a, .homepage-footer>a:active {
+  padding: 0 10px;
+  color: #d9a7c7;
+}
+.flex-box {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+}
+/* media query */
+@media screen and (max-width: 380px) {
+  .login {
+    font-size: 1.5em;
+  }
+  .login-text, .wrapper>p {
+    font-size: .9em;
+  }
+  .label {
+    line-height: 2.3;
+  }
+  .icon {
+    width: .7em;
+    height: auto;
+    margin-right: 5px;
+  }
+  .intro {
+    font-size: 1.5em;
+  }
+  .info {
+    font-size: 1em;
+  }
+}
